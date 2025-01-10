@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+group = 'LnpUpmQ'
+version = '4.6.2'
+
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact('libs/bytebeautyeffect-v4.6.2.aar') {
+                groupId project.group
+                artifactId project.name
+                version project.version
+            }
+        }
+    }
+}
+
+wrapper {
+    gradleVersion = "7.3.3"
+    distributionType = Wrapper.DistributionType.ALL
+}
