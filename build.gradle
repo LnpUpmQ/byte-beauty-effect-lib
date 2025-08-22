@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'maven-publish'
 
 group = 'LnpUpmQ'
-version = '4.6.2'
+version = '4.7.2'
 
 
 repositories {
@@ -18,7 +18,7 @@ java {
 publishing {
     publications {
         maven(MavenPublication) {
-            artifact('libs/bytebeautyeffect-v4.6.2.aar') {
+            artifact('libs/4.7.2/effectAAR-release.aar') {
                 groupId project.group
                 artifactId project.name
                 version project.version
